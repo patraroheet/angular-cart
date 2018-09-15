@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+.h{
+      margin: 0px -1px 20px;
+      border-top: 1px solid #c9c7c7;
+    }
+.c1{
+    height: 30px;
+    padding-left: 60px;
+}
+.c1:hover{
+    background-color:#edeff2;
+}
+.c2{
+   text-decoration-line: none;
+}
+.c3{
+    color: red;
+}
+#id1{
+    text-decoration: none;
+}
+#id1:hover{
+    color: blue;
+}
+#id2{
+    z-index: 9;
+}
+.c4{
+    width: 260px;
+    height: 50px;
+    border: 1px#d8dadd solid;
+    border-radius: 2px;
+    padding-left: 15px;
+}
+#id3{
+    font-size: 14px;
+}
+#id4{
+    padding-left: 35px;
+    padding-top: 9px;
+}
+.c5{
+    width: 100%;
+    border: 1px #d8dadd solid;   
+}
+.c6{
+    font-weight: 600;
+}
+.c7{
+    background-color:#f1f3f6;
+    width: 50px;
+    padding-left: 5px;
+    border-radius: 2px;
+}
+.c8{
+   font-weight: 700;
+    font-size: 13px;
+}
+footer {
+background: #343a40;
+padding: 40px;
+}
+footer a{
+   color: white;
+}

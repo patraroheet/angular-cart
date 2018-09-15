@@ -1,4 +1,101 @@
-<a routerLink="/cart">Cart</a>
+<!-- <a routerLink="/cart">Cart</a> -->
 <!-- header -->
+<div class="container-fluid">
+  <div class="row" style="height:60px">
+   <div class="col-1 bg-warning">
+        <div class="row">
+          <div class="col-12">
+            <div class="ml-4"> 
+                <img src="zeekit.png" style="width:70px;height:65px">
+             </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="col-8 bg-warning">
+        <form>
+          <div class="input-group">
+            <input type="text" placeholder="Search for product,brand and more" class="form-control mt-2" title="Search for product,brand and more">
+          <div class="input-group-append mt-2">
+            <button class="btn btn-light" type="submit"><span class="fa fa-search"></span></button>  
+          </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-2 bg-warning">
+       <nav class="navbar" id="id2">
+         <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark font-weight-bold" href="#" data-toggle="dropdown">Soumya Ranjan</a>
+         <div class="dropdown-menu" style="width: 190px;">
+         <a class="dropdown-item" href="#"><span class="c3 fa fa-user-circle-o m-2"></span>My Profile</a><hr>
+         <a class="dropdown-item" href="#"><span class="c3 fa fa-cube m-2"></span>Orders</a><hr>
+         <a class="dropdown-item" href="#"><span class="c3 fa fa-heart m-2"></span>Wishlist</a><hr>
+         <a class="dropdown-item" href="#"><span class="c3 fa fa-credit-card m-2"></span>Payments</a><hr>
+         <a class="dropdown-item" href="#"><span class="c3 fa fa-gift m-2"></span>Gift cards</a><hr>
+         <a class="dropdown-item" href="#"><span class="c3 fa fa-bell m-2"></span>Notifications</a><hr>
+         <a class="dropdown-item" href="#"><span class="c3 fa fa-sign-out m-2"></span>Logout</a>
+        </div>
+        </li>
+        </ul>
+       </nav>
+      </div>
+      <div class="col-1 bg-dark">
+           <a href="mycart.html"><span class="fa fa-shopping-cart mt-3 mr-1 c3"><p class="d-inline font-weight-bold text-light text-monospace ml-1">Cart</p></span></a>
+      </div>
+  </div>
+</div>
 <router-outlet></router-outlet>
 <!-- footer -->
+<footer class="text-light mt-4">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-3 col-lg-4 col-xl-3">
+              <h5>ABOUT</h5>
+              <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+              <p class="mb-0">
+                  Shop here and get eclusive offers and discounts for free!!!
+              </p>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+              <h5>BROWSE</h5>
+              <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+              <ul class="list-unstyled">
+                  <li><a href="">MENS</a></li>
+                  <li><a href="">WOMENS</a></li>
+                  <li><a href="">CAMPAIGN</a></li>
+                  <li><a href="">NEW</a></li>
+              </ul>
+          </div>
+
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
+              <h5>OTHERS</h5>
+              <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+              <ul class="list-unstyled">
+                  <li><a href="">support</a></li>
+                  <li><a href="">location</a></li>
+                  <li><a href="">Privacy</a></li>
+                  <li><a href="">Terms</a></li>
+              </ul>
+          </div>
+
+          <div class="col-md-4 col-lg-3 col-xl-3">
+              <h5>Contact</h5>
+              <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+              <ul class="list-unstyled">
+              <li>MY SHOPPING</li>
+              <li>email@Shopping.com</li>
+              <li>+89845647</li>
+              </ul>
+          </div>
+
+          <div class="col-12 copyright">
+              <p class="float-left">
+                  <a href="#">Back to top</a>
+              </p>
+          </div>
+      </div>
+  </div>
+</footer>
