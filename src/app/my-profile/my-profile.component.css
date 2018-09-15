@@ -1,0 +1,44 @@
+.h{
+    margin: 0px -1px 20px;
+    border-top: 1px solid #c9c7c7;
+  }
+.c1{
+  height: 30px;
+  padding-left: 60px;
+}
+.c1:hover{
+  background-color:#edeff2;
+}
+.c2{
+ text-decoration-line: none;
+}
+.c3{
+  color: red;
+}
+#id1{
+  text-decoration: none;
+}
+#id1:hover{
+  color: blue;
+}
+#id2{
+  z-index: 9;
+}
+.c4{
+  width: 260px;
+  height: 50px;
+  border: 1px#d8dadd solid;
+  border-radius: 2px;
+  padding-left: 15px;
+}
+#id3{
+  font-size: 14px;
+}
+footer {
+background: #343a40;
+padding: 40px;
+color: white;
+}
+footer a{
+ color: white;
+}
