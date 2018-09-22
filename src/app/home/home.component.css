@@ -21,7 +21,8 @@
    border-bottom: 2px solid blue;
   }
   #input1[type="text"]{
-     background: white url("search-icon-2.png") no-repeat left center;
+     background-image: url("search-icon-2.png");
+     background: white no-repeat left center;
      background-size: 30px 30px;
      padding-left: 29px;
   }
