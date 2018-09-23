@@ -1,0 +1,71 @@
+#input1{
+    border: 0;
+    outline: 0;
+    background: transparent;
+   }
+   #input1:hover{
+    border-bottom: 2px solid blue;
+   }
+   #id1{
+     font-size: 16px;
+     text-decoration-line: none;
+   }
+   .h{
+     margin: 5px -20px 20px;
+     border-top: 1px solid #c9c7c7;
+   }
+   .h1{
+     border-top:1px dashed#c9c7c7;
+   }
+   #p{
+     text-decoration-line: none;
+     color:black;
+   }
+   .c1{
+     margin-top: 30px;
+     text-align: center;
+   }
+   .c2{
+     margin-left: 23px;
+   }
+   .c3{
+     font-size: 12px;
+   }
+   #id2{
+     text-decoration-line: none;
+   }
+   #id3{
+     font-size: 14px;
+   }
+   #id4{
+     font-size: 12px;
+   }
+   #id5{
+     width: 230px;
+     height: 40px;
+     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-size: 17px;
+     font-weight: 600;
+     background-color: white;
+     border: 1px solid gainsboro;
+     text-align: center;
+     padding-top: 5px;
+   }
+   #id6{
+     width: 200px;
+     height: 40px;
+     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-size: 17px;
+     font-weight: 600;
+     color: white;
+     background-color: #fb641b;
+     border: 1px solid #fb641b;
+     text-align: center;
+     padding-top: 5px;
+   }
+   #id7{
+     z-index: 9;
+   }
+   .c4{
+     color: red;
+   }
