@@ -5,7 +5,7 @@
    <div class="col-1 bg-warning">
         <div class="row">
           <div class="col-12">
-            <div class="ml-4"> 
+            <div class="ml-4">
                <a routerLink="/"><img src="assets/zeekit.png" style="width:70px;height:65px"></a>
              </div>
         </div>
@@ -17,7 +17,7 @@
           <div class="input-group">
             <input type="text" placeholder="Search for product,brand and more" class="form-control mt-2" title="Search for product,brand and more">
           <div class="input-group-append mt-2">
-            <button class="btn btn-light" type="submit"><span class="fa fa-search"></span></button>  
+            <button class="btn btn-light" type="submit"><span class="fa fa-search"></span></button>
           </div>
           </div>
         </form>
@@ -47,8 +47,10 @@
   </div>
 </div>
 <router-outlet></router-outlet>
+
 <!-- footer -->
 <footer class="text-light mt-4">
+  <router-outlet name="rightSidebar"></router-outlet>
   <div class="container-fluid">
       <div class="row">
           <div class="col-md-3 col-lg-4 col-xl-3">

@@ -1,3 +1,5 @@
+/* home component*/
+
 .h{
     margin: 5px -20px 20px;
     border-top: 1px solid #c9c7c7;
@@ -29,3 +31,6 @@
   .c4{
       font-size: 15px;
   }
+.product-tile{
+  height: 500px;
+}
