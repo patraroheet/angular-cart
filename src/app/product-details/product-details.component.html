@@ -5,15 +5,14 @@
 
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item "><a href="#" class="text-dark" style="text-decoration: none">Home</a></li>
-      <li class="breadcrumb-item"><a href="#" class="text-dark" style="text-decoration: none">clothing</a></li>
-      <li class="breadcrumb-item"><a href="#" class="text-dark" style="text-decoration: none"> men clothing</a></li>
-      <li class="breadcrumb-item"><a href="#" class="text-dark" style="text-decoration: none">jacket</a></li>
-      <li class="breadcrumb-item"><a href="#" class="text-dark" style="text-decoration: none">HRX By Hrithik Roshan
-        Jackets</a></li>
-
-      <li class="breadcrumb-item"><a href="#" class="text-dark" style="text-decoration: none">More By HRX By Hrithik
-        Roshan</a></li>
+      <li class="breadcrumb-item "><a href="#" class="text-dark" style="text-decoration: none">Home</a>
+      </li>
+      <li class="breadcrumb-item"><a href="#" class="text-dark" style="text-decoration: none">{{product.MainCategory}}</a>
+      </li>
+      <li class="breadcrumb-item"><a href="#" class="text-dark" style="text-decoration: none">{{product.category}}</a>
+      </li>
+      <li class="breadcrumb-item"><a href="#" class="text-dark" style="text-decoration: none">{{product.name}}</a>
+      </li>
     </ol>
   </nav>
 
@@ -21,11 +20,11 @@
     <div class="row">
       <div class="col-sm-6">
         <div class="card">
-          <img class="card-img-top" src="../../assets/img/HT-1003.jpg" height="400" width="400" alt="HT-1003">
+          <img class="card-img-top" src="{{product.ProductPicUrl}}"  alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title">Notebook Basic 19</h4>
+            <h4 class="card-title">{{product.UoM}}</h4>
             <p class="card-text">
-              Sold by:<a href="">SELLER: Unistand</a>
+              Sold by:<a href="">{{product.SupplierName}}</a>
             </p>
             <a href="#!" class="btn ">view more information</a>
           </div>
@@ -34,11 +33,14 @@
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h3 class="card-title">Notebook Basic 19 with 2,80 GHz quad core, 19\" LCD, 8 GB DDR3 RAM, 1000 GB Hard Disc, Windows 8 Pro</h3>
-            <p class="card-text">
-              $1559
+            <h3 class="card-title">{{product.Name}}</h3>
+
+            <div>
+              <p class="card-text">
+              {{product.Price | currency}}
             </p>
-            <p class="card-message">Additional tax may apply; charged at checkout</p>
+            </div>
+            <p class="card-message">Status: {{product.Status}}</p>
             <div class="clearfix">
               <h5 class="float-sm-left">Select size</h5>
               <a href="" class="float-sm-right ml-5">Size chart</a>
@@ -61,21 +63,16 @@
             <div class="clearfix">
               <button type="button" id="id4" class="btn float-left">VIEW</button>
               <a routerLink="/cart">
-                <button type="button" id="id6" class="btn float-left ml-5">Add to cart</button>
+                <button type="button" id="id6" class="btn float-left ml-5" (click)="addToCart(product)">Add to cart</button>
               </a>
             </div>
             <div>
               <h5>Product Details</h5>
 
-              <p>Olive green printed sporty jacket, has a hooded, 2 pockets, zip closure, long sleeves, straight hem,
-                mesh lining</p>
+              <p>{{Product.Description}}</p>
             </div>
 
-            <div>
-              <h5>Material & Care</h5>
-              <p>Polyester </p>
-              <p>Machine-wash</p>
-            </div>
+
             <div>
               <h6 style="color: #526CD0;">Check Delivery Options</h6>
               <P>Tax: Applicable tax on the basis of exact location & discount will be charged at the time of

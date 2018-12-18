@@ -16,62 +16,92 @@
               <input type="text" placeholder="Enter Delivery Pincode" value="560037" class="float-right ml-2" id="input1" style="width: 170px;">
               <span class="fa fa-map-marker float-right mt-1"></span>
            </div><hr class="h">
-           <div class="clearfix">
+
+           <div class="clearfix" *ngFor=""let item of cart.items>
+
              <div class="float-left">
-             <a href=""><img src="../../assets/img/HT-1003.jpg" class="ml-5" style="width:75px;height: 100px;"></a>
-              <div class="c2">
-             <button class="c1 float-left mr-2">-</button>
-             <input type="text" value="1" name="number of items" class="c1 float-left" style="width:35px">
-             <button class="c1 float-left ml-2">+</button>
-              </div>
+             <a href=""><img src="{{item.ProductPicUrl}}" class="ml-5" style="width:75px;height: 100px;">
+             </a>
+              <!--<div class="c2">-->
+             <!--<button class="c1 float-left mr-2">-</button>-->
+             <!--<input type="text" value="1" name="number of items" class="c1 float-left" style="width:35px">-->
+             <!--<button class="c1 float-left ml-2">+</button>-->
+              <!--</div>-->
             </div>
-             <div class="float-left ml-5">
-                 <div class="clearfix"><a href="" id="p" class="float-left"><p>Notebook Basic 19</p></a>
-                 <p class="float-right ml-5" id="id3">Delivery in 2 Days, Sat | Free</p>
+
+             <div class="float-left ml-3">
+               <a href="" id="p"><p>HRX by Hrithik Roshan Men Sporty Jacket</p></a>
+
+               <div class="clearfix">
+                 <div class="c1 float-left mr-2" (click)="updateCart(item.ProductId,'decrement',1)">-</div>
+                 <input type="text" value="{{cart.count}}" name="number of items" class="c5 float-left mb-2" style="width:45px">
+                 <div class="c1 float-left ml-2" (click)="updateCart(item.ProductId,'increment',1)">+</div>
+               </div>
+
+               <!--<div class="float-left ml-5">-->
+                 <!--<div class="clearfix"><a href="" id="p" class="float-left"><p>Notebook Basic 19</p></a>-->
+                 <!--<p class="float-right ml-5" id="id3">Delivery in 2 Days, Sat | Free</p>-->
+                 <!--</div>-->
+                 <!--<div class="clearfix">-->
+                 <!--<p class="c3 text-muted  float-left">Size : L</p>-->
+                 <!--<p class="c3 float-right text-muted" >10 Days Replacement Policy</p>-->
+                 <!--</div>-->
+                 <div class="mt-2">
+                   <p class="card-subtitle text-muted c3">{{item.SupplierName}}</p>
+                 <p class="float-left ml-2"></p>
                  </div>
+
                  <div class="clearfix">
-                 <p class="c3 text-muted  float-left">Size : L</p>
-                 <p class="c3 float-right text-muted" >10 Days Replacement Policy</p>
+                   <div class="float-left">
+                    <p class="font-weight-bold">{{item.Price | currency}}</p>
+                   </div>
+
+                   <div class="float-left">
+                     <a href="" class="ml-2 text-body" (click)="removeFromCart(item.ProductId)">REMOVE</a>
+                   </div>
                  </div>
-                 <div class="clearfix"><p class="card-subtitle text-muted c3 float-left">SELLER: Unistand</p>
-                 <p class="float-left ml-2"></p></div>
-                 <div class="clearfix mt-1"><p class="font-weight-bold float-left">$1,559</p>
-                   <a href="" class="float-left ml-3 text-success" id="id2">2 Offers Available !</a>
-                 </div>
-                 <div>
-                   <a href="" class="text-body">SAFE FOR LATER</a>
-                   <a href="" class="ml-2 text-body">REMOVE</a>
-                 </div>
-                 <div class="mt-4 clearfix">
-                   <a href="" class="text-body"><div id="id5" class="float-left ml-5 shadow-sm bg-white">CONTINUE SHOPPING</div></a>
-                   <a routerLink="/shipping" class="text-light"><div id="id6" class="float-right ml-4">PLACE ORDER</div></a>
+
+                 <div class="clearfix">
+                   <a href="" class="text-body">
+                     <div id="id5" class="float-left ml-5 shadow-sm bg-white">CONTINUE SHOPPING</div>
+                   </a>
+                   <a routerLink="/shipping" class="text-light">
+                     <div id="id6" class="float-right ml-4">PLACE ORDER</div>
+                   </a>
                  </div>
              </div>
            </div>
          </div>
         </div>
         </div>
+    </div>
+    <app-cart-items [items] = "cart.items" (childClickTrigger)="handleClick($event)"></app-cart-items>
         <div class="col-4">
            <div class="card">
             <div class="card-body">
             <div class="card-subtitle">
              <h6 class="text-muted">PRICE DETAILS</h6>
-            </div><hr class="h">
+            </div>
+
+              <hr class="h">
+
             <div class="clearfix">
               <p class="float-left">Price(1 item)</p>
-              <p class="float-right">Rs 1559</p>
+              <p class="float-right">{{cart.total | currency}}</p>
             </div>
+
             <div class="clearfix">
               <p class="float-left">Delivery Charges</p>
               <p class="float-right">Free</p>
-            </div><hr class="h1">
+            </div>
+              <hr class="h1">
+
             <div class="clearfix">
               <p class="float-left mt-2">Amount Payable</p>
-              <p class="float-right mt-2">Rs1559</p>
+              <p class="float-right mt-2">{{cart.total | currency}}</p>
             </div>
             </div>
            </div>
           </div>
         </div>
-      </div>
 </body>

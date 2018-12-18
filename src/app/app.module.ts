@@ -11,6 +11,9 @@ import {ShippingComponent} from './shipping/shipping.component';
 import {PaymentComponent} from './payment/payment.component';
 import {EcomService} from './shared/ecom.service';
 import {HttpClientModule} from '@angular/common/http';
+import { SideFilterComponent } from './home/side-filter/side-filter.component';
+import { CartItemsComponent } from './cart-items/cart-items.component';
+import {CartService} from './shared/cart.service';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,8 @@ import {HttpClientModule} from '@angular/common/http';
     MyProfileComponent,
     ShippingComponent,
     PaymentComponent,
+    SideFilterComponent,
+    CartItemsComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,7 @@ import {HttpClientModule} from '@angular/common/http';
       {path: 'payment', component: PaymentComponent, pathMatch: 'full'}
     ])
   ],
-  providers: [EcomService],
+  providers: [EcomService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
